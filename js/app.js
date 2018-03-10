@@ -26,3 +26,13 @@ fetchComponents().then(() => {
   // Make vue use the route and start the app
   const app = new Vue({router}).$mount('#app');
 });
+
+function active(elem) {
+  $(".active").removeClass("active");
+  element = $("#"+elem+"Link");
+  element.addClass("active");
+}
+
+$(document).ready(function(){
+  active("home");
+});
